@@ -4,7 +4,6 @@ import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
-import { Image } from 'react-native';
 
 const ProductDetails = ({ product, products }) => {
     const { image, name, details, price } = product;
@@ -21,11 +20,11 @@ const ProductDetails = ({ product, products }) => {
             <div className='product-detail-container'>
                 <div>
                     <div className='image-container'>
-                        <Image src={urlFor(image && image[index])} alt='' className='product-detail-image' />
+                        <img src={urlFor(image && image[index])} alt='headphone' className='product-detail-image' />
                     </div>
                     <div className='small-images-container'>
                         {image.map((item, i) => (
-                            <Image key={i} src={urlFor(item)} alt='' className={i === index ? 'small-image selected-image' : 'small-image'} onMouseEnter={() => setIndex(i)} />
+                            <img key={i} src={urlFor(item)} alt='headphone' className={i === index ? 'small-image selected-image' : 'small-image'} onMouseEnter={() => setIndex(i)} />
                         ))}
                     </div>
                 </div>
