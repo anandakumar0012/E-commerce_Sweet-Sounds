@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
+import { Image } from 'react-native';
+
 
 import { urlFor } from '../lib/client';
 
